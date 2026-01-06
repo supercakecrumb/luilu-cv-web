@@ -41,18 +41,23 @@
         
         <ul class="navigation__menu" role="menubar">
           <li role="none">
-            <a href="#hero" class="navigation__link" role="menuitem">Главная</a>
+            <a href="#hero" class="navigation__link" role="menuitem" data-i18n="nav.home">Главная</a>
           </li>
           <li role="none">
-            <a href="#works" class="navigation__link" role="menuitem">Мои работы</a>
+            <a href="#works" class="navigation__link" role="menuitem" data-i18n="nav.works">Мои работы</a>
           </li>
           <li role="none">
-            <a href="#contacts" class="navigation__link" role="menuitem">Контакты</a>
+            <a href="#contacts" class="navigation__link" role="menuitem" data-i18n="nav.contacts">Контакты</a>
           </li>
         </ul>
         
+        <!-- Language Switcher Button -->
+        <button class="language-switcher" title="Switch to English">
+          РУ
+        </button>
+        
         <div class="navigation__cta">
-          <a href="#contacts" class="btn btn--primary">Заказать дизайн</a>
+          <a href="#contacts" class="btn btn--primary" data-i18n="header.cta">Заказать дизайн</a>
         </div>
         
         <!-- Mobile menu button -->
@@ -70,8 +75,8 @@
       <div class="container">
         <div class="hero__content">
           <h1 class="hero__title">
-            <span class="hero__title-main">Дизайн,</span>
-            <span class="hero__title-sub">который работает</span>
+            <span class="hero__title-main" data-i18n="hero.title1">Дизайн,</span>
+            <span class="hero__title-sub" data-i18n="hero.title2">который работает</span>
           </h1>
         </div>
       </div>
@@ -91,18 +96,18 @@
           </div>
           
           <div class="about__content">
-            <p class="about__greeting">Привет! Меня зовут Луиза и я</p>
-            <h2 id="about-title" class="about__title">
+            <p class="about__greeting" data-i18n="about.greeting">Привет! Меня зовут Луиза и я</p>
+            <h2 id="about-title" class="about__title" data-i18n-html="about.title">
               графический<br>и UX/UI-дизайнер
             </h2>
             
             <div class="about__badges">
               <div class="badge badge--location">
                 <img src="/images/icons/location.png" alt="" class="badge__icon" aria-hidden="true">
-                <span class="badge__text">г. Санкт-Петербург</span>
+                <span class="badge__text" data-i18n="about.location">г. Санкт-Петербург</span>
               </div>
               <div class="badge badge--experience">
-                <span class="badge__text"><strong>Опыт:</strong> 4 года</span>
+                <span class="badge__text" data-i18n="about.experience"><strong>Опыт:</strong> 4 года</span>
               </div>
             </div>
           </div>
@@ -115,42 +120,42 @@
       <div class="container">
         <div class="works__wrapper">
           <div class="works__content">
-            <h2 id="works-title" class="works__title">Cоздаю</h2>
+            <h2 id="works-title" class="works__title" data-i18n="works.title">Cоздаю</h2>
             
             <ul class="works__categories">
               <li class="works__category">
-                <span class="category__text">Айдентику</span>
+                <span class="category__text" data-i18n="works.categories.identity">Айдентику</span>
               </li>
               <li class="works__category-divider" aria-hidden="true"></li>
               
               <li class="works__category">
-                <span class="category__text">Дизайн упаковок</span>
+                <span class="category__text" data-i18n="works.categories.packaging">Дизайн упаковок</span>
               </li>
               <li class="works__category-divider" aria-hidden="true"></li>
               
               <li class="works__category">
-                <span class="category__text">Дизайн для соц.сетей</span>
+                <span class="category__text" data-i18n="works.categories.social">Дизайн для соц.сетей</span>
               </li>
               <li class="works__category-divider" aria-hidden="true"></li>
               
               <li class="works__category">
-                <span class="category__text">Презентации</span>
+                <span class="category__text" data-i18n="works.categories.presentations">Презентации</span>
               </li>
               <li class="works__category-divider" aria-hidden="true"></li>
               
               <li class="works__category">
-                <span class="category__text">Лендинг и сайты</span>
+                <span class="category__text" data-i18n="works.categories.landing">Лендинг и сайты</span>
               </li>
               <li class="works__category-divider" aria-hidden="true"></li>
               
               <li class="works__category works__category--active">
-                <span class="category__text">Мобильные<br>приложения</span>
+                <span class="category__text" data-i18n-html="works.categories.mobile">Мобильные<br>приложения</span>
               </li>
             </ul>
             
             <div class="works__cta">
               <a href="#contacts" class="btn-link">
-                <span class="btn-link__text">Посмотреть<br>все проекты</span>
+                <span class="btn-link__text" data-i18n-html="works.viewAll">Посмотреть<br>все проекты</span>
                 <span class="btn-link__icon">
                   <img src="/images/icons/arrow.svg" alt="" aria-hidden="true">
                 </span>
@@ -182,7 +187,7 @@
             <img src="/images/decorative/group-element.svg" alt="" class="experience__group">
           </div>
           
-          <h2 id="experience-title" class="experience__title">Опыт работы</h2>
+          <h2 id="experience-title" class="experience__title" data-i18n="experience.title">Опыт работы</h2>
           
           <div class="experience__timeline">
             <!-- Experience Item 1 -->
@@ -225,7 +230,7 @@
       <div class="container">
         <div class="education__card">
           <div class="education__section education__section--left">
-            <h2 id="education-title" class="education__title">Образование</h2>
+            <h2 id="education-title" class="education__title" data-i18n="education.title">Образование</h2>
             
             <div class="education__timeline">
               <div class="education__item">
@@ -247,7 +252,7 @@
           </div>
           
           <div class="education__section education__section--right">
-            <h2 class="education__title">Инструменты</h2>
+            <h2 class="education__title" data-i18n="education.titleTools">Инструменты</h2>
             
             <div class="tools__grid">
               <div class="tool__item">
@@ -285,7 +290,7 @@
       <div class="container">
         <div class="contacts__wrapper">
           <div class="contacts__info">
-            <h2 id="contacts-title" class="contacts__title">Контакты</h2>
+            <h2 id="contacts-title" class="contacts__title" data-i18n="contacts.title">Контакты</h2>
             
             <div class="contacts__methods">
               <a href="https://t.me/o_olui" class="contact-method" target="_blank" rel="noopener noreferrer">
@@ -301,24 +306,24 @@
           </div>
           
           <div class="contacts__next">
-            <h2 class="contacts__next-title">Что будет дальше?</h2>
+            <h2 class="contacts__next-title" data-i18n="contacts.nextTitle">Что будет дальше?</h2>
             
             <ul class="contacts__next-list">
               <li class="contacts__next-item">
                 <img src="/images/decorative/bullet-point.svg" alt="" class="bullet-icon" aria-hidden="true">
-                <span>я отвечу в течение 24 часов</span>
+                <span data-i18n="contacts.nextSteps.0">я отвечу в течение 24 часов</span>
               </li>
               <li class="contacts__next-item">
                 <img src="/images/decorative/bullet-point.svg" alt="" class="bullet-icon" aria-hidden="true">
-                <span>задам несколько вопросов</span>
+                <span data-i18n="contacts.nextSteps.1">задам несколько вопросов</span>
               </li>
               <li class="contacts__next-item">
                 <img src="/images/decorative/bullet-point.svg" alt="" class="bullet-icon" aria-hidden="true">
-                <span>предложу формат и сроки</span>
+                <span data-i18n="contacts.nextSteps.2">предложу формат и сроки</span>
               </li>
               <li class="contacts__next-item">
                 <img src="/images/decorative/bullet-point.svg" alt="" class="bullet-icon" aria-hidden="true">
-                <span>без обязательств и навязывания</span>
+                <span data-i18n="contacts.nextSteps.3">без обязательств и навязывания</span>
               </li>
             </ul>
           </div>
@@ -331,7 +336,7 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__content">
-        <p class="footer__text">Мышиные права защищены</p>
+        <p class="footer__text" data-i18n="footer.copyright">Мышиные права защищены</p>
       </div>
     </div>
   </footer>

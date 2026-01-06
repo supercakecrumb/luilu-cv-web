@@ -36,6 +36,9 @@
 /* Animation effects */
 @import './components/animations.css';
 
+/* Language switcher */
+@import './components/language-switcher.css';
+
 /* ========== Section Styles ========== */
 /* Header section */
 @import './sections/header.css';
