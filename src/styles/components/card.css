@@ -1,7 +1,368 @@
 /* Card Component Styles */
 
-/* TODO: Implement card styles in next phase */
+/* ========== Base Card Styles ========== */
 
 .card {
-  /* Placeholder for card component styles */
+  display: block;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+/* ========== Glass Card ========== */
+
+.card-glass {
+  background: rgba(221, 202, 207, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 19px;
+  box-shadow: 0px 2px 38.8px -6px rgba(0, 0, 0, 0.25);
+  padding: 60px;
+  border: none;
+}
+
+/* Fallback for no backdrop-filter support */
+@supports not (backdrop-filter: blur(20px)) {
+  .card-glass {
+    background: rgba(221, 202, 207, 0.95);
+  }
+}
+
+/* ========== Experience Card ========== */
+
+.card-experience {
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 11px;
+  padding: 32px;
+  margin-bottom: 32px;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.card-experience:last-child {
+  margin-bottom: 0;
+}
+
+.card-experience:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Experience Card Header */
+.card-experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.card-experience-title {
+  flex: 1;
+}
+
+.card-experience-title h3 {
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.card-experience-company {
+  font-size: 18px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.card-experience-date {
+  font-family: var(--font-metadata);
+  font-size: 16px;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* Experience Card Content */
+.card-experience-content {
+  margin-top: 16px;
+}
+
+.card-experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-experience-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.card-experience-list li:last-child {
+  margin-bottom: 0;
+}
+
+.card-experience-list li::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========== Education Card ========== */
+
+.card-education {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.card-education-institution {
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.card-education-degree {
+  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.card-education-year {
+  font-family: var(--font-metadata);
+  font-size: 16px;
+  color: var(--color-primary);
+}
+
+/* ========== Tool Card ========== */
+
+.card-tool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: transparent;
+  border-radius: 10px;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.card-tool img,
+.card-tool svg {
+  width: 61px;
+  height: 61px;
+  filter: grayscale(100%);
+  transition: filter var(--duration-normal) var(--ease-out);
+}
+
+.card-tool:hover img,
+.card-tool:hover svg {
+  filter: grayscale(0%);
+}
+
+/* ========== Contact Card ========== */
+
+.card-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  background: transparent;
+  border: none;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.card-contact-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-contact-icon svg,
+.card-contact-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.card-contact-content {
+  flex: 1;
+}
+
+.card-contact-text {
+  font-size: 24px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.card-contact:hover .card-contact-text {
+  color: var(--color-primary);
+}
+
+/* ========== Container Cards ========== */
+
+.card-container-large {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.card-container-medium {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== Card States ========== */
+
+.card-hover {
+  cursor: pointer;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(153, 111, 113, 0.2);
+}
+
+/* ========== Card Focus ========== */
+
+.card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ========== Responsive Styles ========== */
+
+@media (max-width: 1440px) {
+  .card-glass {
+    padding: 48px;
+  }
+
+  .card-container-large {
+    max-width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-glass {
+    padding: 40px;
+  }
+
+  .card-experience {
+    padding: 24px;
+  }
+
+  .card-container-large,
+  .card-container-medium {
+    max-width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-lg);
+  }
+
+  .card-glass {
+    padding: 32px;
+    border-radius: 16px;
+  }
+
+  .card-experience {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .card-experience-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card-experience-title h3,
+  .card-experience-company {
+    font-size: 16px;
+  }
+
+  .card-experience-date {
+    font-size: 14px;
+  }
+
+  .card-experience-list li {
+    font-size: 14px;
+  }
+
+  .card-education-institution {
+    font-size: 16px;
+  }
+
+  .card-education-degree,
+  .card-education-year {
+    font-size: 14px;
+  }
+
+  .card-contact-text {
+    font-size: 20px;
+  }
+
+  .card-contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card-contact-icon svg,
+  .card-contact-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card-tool img,
+  .card-tool svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .card-container-large,
+  .card-container-medium {
+    max-width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-glass {
+    padding: 24px;
+  }
+
+  .card-experience {
+    padding: 16px;
+  }
+
+  .card-contact {
+    gap: 16px;
+  }
+
+  .card-contact-text {
+    font-size: 18px;
+  }
+
+  .card-container-large,
+  .card-container-medium {
+    max-width: calc(100% - 32px);
+  }
 }

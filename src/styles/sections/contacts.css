@@ -1,7 +1,460 @@
 /* Contacts Section Styles */
 
-/* TODO: Implement contacts section styles in next phase */
+/* ========== Base Contacts Styles ========== */
 
 .contacts {
-  /* Placeholder for contacts section styles */
+  padding: 120px 0;
+  background: var(--color-white);
+  position: relative;
+}
+
+/* ========== Contacts Container ========== */
+
+.contacts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ========== Contacts Title ========== */
+
+.contacts-title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.96px;
+  color: var(--color-black);
+  margin-bottom: 60px;
+}
+
+/* ========== Contacts Content Layout ========== */
+
+.contacts-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* ========== Contact Methods ========== */
+
+.contacts-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contacts-method-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.contacts-method-item:hover {
+  transform: translateX(4px);
+}
+
+.contacts-method-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-method-icon svg,
+.contacts-method-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.contacts-method-text {
+  flex: 1;
+}
+
+.contacts-method-link {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.contacts-method-link:hover {
+  color: var(--color-primary);
+}
+
+.contacts-method-label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+/* ========== What's Next Section ========== */
+
+.contacts-whats-next {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-whats-next-title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.96px;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.contacts-whats-next-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts-whats-next-item {
+  position: relative;
+  padding-left: 28px;
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.contacts-whats-next-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 11px;
+  height: 11px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+/* ========== Contact Form (Optional) ========== */
+
+.contacts-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contacts-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contacts-form-label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+}
+
+.contacts-form-input,
+.contacts-form-textarea {
+  font-family: var(--font-body);
+  font-size: 16px;
+  padding: 12px 16px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: border-color var(--duration-fast) var(--ease-out);
+  background: var(--color-white);
+}
+
+.contacts-form-input:focus,
+.contacts-form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.contacts-form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contacts-form-submit {
+  align-self: flex-start;
+}
+
+/* ========== Responsive Styles ========== */
+
+@media (max-width: 1200px) {
+  .contacts-container {
+    padding: 0 60px;
+  }
+
+  .contacts-content {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts {
+    padding: 100px 0;
+  }
+
+  .contacts-container {
+    padding: 0 40px;
+  }
+
+  .contacts-title {
+    font-size: 42px;
+    letter-spacing: 0.84px;
+    margin-bottom: 48px;
+  }
+
+  .contacts-content {
+    gap: 48px;
+  }
+
+  .contacts-method-link {
+    font-size: 20px;
+  }
+
+  .contacts-whats-next-title {
+    font-size: 42px;
+    letter-spacing: 0.84px;
+    margin-bottom: 28px;
+  }
+
+  .contacts-whats-next-item {
+    font-size: 20px;
+    padding-left: 24px;
+  }
+
+  .contacts-whats-next-item::before {
+    top: 10px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    padding: 80px 0;
+  }
+
+  .contacts-title {
+    font-size: 36px;
+    letter-spacing: 0.72px;
+    margin-bottom: 40px;
+  }
+
+  .contacts-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contacts-methods {
+    gap: 20px;
+  }
+
+  .contacts-method-item {
+    padding: 12px 0;
+  }
+
+  .contacts-method-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contacts-method-icon svg,
+  .contacts-method-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contacts-method-link {
+    font-size: 20px;
+  }
+
+  .contacts-method-label {
+    font-size: 14px;
+  }
+
+  .contacts-whats-next-title {
+    font-size: 36px;
+    letter-spacing: 0.72px;
+    margin-bottom: 24px;
+  }
+
+  .contacts-whats-next-list {
+    gap: 16px;
+  }
+
+  .contacts-whats-next-item {
+    font-size: 18px;
+    padding-left: 22px;
+  }
+
+  .contacts-whats-next-item::before {
+    top: 9px;
+    width: 9px;
+    height: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    padding: 60px 0;
+  }
+
+  .contacts-container {
+    padding: 0 24px;
+  }
+
+  .contacts-title {
+    font-size: 32px;
+    letter-spacing: 0.64px;
+    margin-bottom: 32px;
+  }
+
+  .contacts-content {
+    gap: 48px;
+  }
+
+  .contacts-methods {
+    gap: 16px;
+  }
+
+  .contacts-method-item {
+    gap: 16px;
+    padding: 10px 0;
+  }
+
+  .contacts-method-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contacts-method-icon svg,
+  .contacts-method-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contacts-method-link {
+    font-size: 18px;
+  }
+
+  .contacts-method-label {
+    font-size: 13px;
+  }
+
+  .contacts-whats-next-title {
+    font-size: 28px;
+    letter-spacing: 0.56px;
+    margin-bottom: 20px;
+  }
+
+  .contacts-whats-next-list {
+    gap: 14px;
+  }
+
+  .contacts-whats-next-item {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+
+  .contacts-whats-next-item::before {
+    top: 8px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .contacts-form-input,
+  .contacts-form-textarea {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .contacts-form-submit {
+    width: 100%;
+  }
+}
+
+/* ========== Animation ========== */
+
+@keyframes contacts-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contacts-title {
+  animation: contacts-fade-in 0.6s var(--ease-out) 0.1s both;
+}
+
+.contacts-methods {
+  animation: contacts-fade-in 0.6s var(--ease-out) 0.2s both;
+}
+
+.contacts-whats-next {
+  animation: contacts-fade-in 0.6s var(--ease-out) 0.3s both;
+}
+
+.contacts-method-item {
+  animation: contacts-fade-in 0.4s var(--ease-out) both;
+}
+
+.contacts-method-item:nth-child(1) { animation-delay: 0.25s; }
+.contacts-method-item:nth-child(2) { animation-delay: 0.3s; }
+.contacts-method-item:nth-child(3) { animation-delay: 0.35s; }
+.contacts-method-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* ========== Accessibility ========== */
+
+.contacts-method-link:focus-visible,
+.contacts-form-input:focus-visible,
+.contacts-form-textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contacts-title,
+  .contacts-methods,
+  .contacts-whats-next,
+  .contacts-method-item {
+    animation: none;
+  }
+
+  .contacts-method-item:hover {
+    transform: none;
+  }
+}
+
+/* ========== Print Styles ========== */
+
+@media print {
+  .contacts {
+    padding: 40px 0;
+  }
+
+  .contacts-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contacts-form {
+    display: none;
+  }
 }

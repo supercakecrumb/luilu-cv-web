@@ -1,7 +1,246 @@
 /* Badge Component Styles */
 
-/* TODO: Implement badge styles in next phase */
+/* ========== Base Badge Styles ========== */
 
 .badge {
-  /* Placeholder for badge component styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--color-light-pink);
+  border-radius: 87px;
+  padding: 8px 24px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-black);
+  line-height: 1;
+  white-space: nowrap;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+/* ========== Badge with Icon ========== */
+
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-icon svg,
+.badge-icon img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ========== Badge Variants ========== */
+
+/* Primary Badge */
+.badge-primary {
+  background: var(--color-light-pink);
+  color: var(--color-black);
+}
+
+/* Secondary Badge */
+.badge-secondary {
+  background: rgba(153, 111, 113, 0.2);
+  color: var(--color-primary);
+}
+
+/* Outline Badge */
+.badge-outline {
+  background: transparent;
+  border: 2px solid var(--color-light-pink);
+  color: var(--color-primary);
+}
+
+/* Solid Badge */
+.badge-solid {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Light Badge */
+.badge-light {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--color-black);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Badge Sizes ========== */
+
+.badge-sm {
+  font-size: 14px;
+  padding: 6px 18px;
+  gap: 6px;
+}
+
+.badge-sm svg,
+.badge-sm img {
+  width: 16px;
+  height: 16px;
+}
+
+.badge-lg {
+  font-size: 18px;
+  padding: 10px 28px;
+  gap: 10px;
+}
+
+.badge-lg svg,
+.badge-lg img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ========== Interactive Badge ========== */
+
+.badge-interactive {
+  cursor: pointer;
+  user-select: none;
+}
+
+.badge-interactive:hover {
+  background: rgba(221, 202, 207, 0.8);
+  transform: translateY(-1px);
+}
+
+.badge-interactive:active {
+  transform: translateY(0);
+}
+
+/* ========== Badge Group ========== */
+
+.badge-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.badge-group-sm {
+  gap: 12px;
+}
+
+.badge-group-lg {
+  gap: 20px;
+}
+
+/* ========== Dot Badge (for notifications) ========== */
+
+.badge-dot {
+  position: relative;
+}
+
+.badge-dot::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: #FF4444;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+/* ========== Badge with Close Button ========== */
+
+.badge-closable {
+  padding-right: 12px;
+}
+
+.badge-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.badge-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.badge-close svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ========== Status Badges ========== */
+
+.badge-success {
+  background: rgba(34, 197, 94, 0.15);
+  color: #15803d;
+}
+
+.badge-warning {
+  background: rgba(251, 191, 36, 0.15);
+  color: #b45309;
+}
+
+.badge-error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #b91c1c;
+}
+
+.badge-info {
+  background: rgba(59, 130, 246, 0.15);
+  color: #1e40af;
+}
+
+/* ========== Animated Badge ========== */
+
+@keyframes badge-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.badge-pulse {
+  animation: badge-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ========== Focus Styles ========== */
+
+.badge-interactive:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ========== Responsive Styles ========== */
+
+@media (max-width: 768px) {
+  .badge {
+    font-size: 14px;
+    padding: 6px 20px;
+  }
+
+  .badge-sm {
+    font-size: 12px;
+    padding: 4px 16px;
+  }
+
+  .badge-lg {
+    font-size: 16px;
+    padding: 8px 24px;
+  }
+
+  .badge-group {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge-group {
+    gap: 8px;
+  }
 }

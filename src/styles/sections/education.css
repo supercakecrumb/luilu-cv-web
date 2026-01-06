@@ -1,7 +1,386 @@
 /* Education Section Styles */
 
-/* TODO: Implement education section styles in next phase */
+/* ========== Base Education Styles ========== */
 
 .education {
-  /* Placeholder for education section styles */
+  padding: 120px 0;
+  background: var(--color-white);
+  position: relative;
+}
+
+/* ========== Education Container ========== */
+
+.education-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ========== Education Title ========== */
+
+.education-title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.96px;
+  color: var(--color-black);
+  margin-bottom: 60px;
+}
+
+/* ========== Education Glass Card Container ========== */
+
+.education-glass-container {
+  width: 100%;
+  min-height: 324px;
+  background: rgba(217, 217, 217, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 19px;
+  box-shadow: 0px 2px 38.8px -6px rgba(0, 0, 0, 0.25);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* Fallback for no backdrop-filter support */
+@supports not (backdrop-filter: blur(20px)) {
+  .education-glass-container {
+    background: rgba(217, 217, 217, 0.95);
+  }
+}
+
+/* ========== Education Section (Left Side) ========== */
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.education-section-title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+/* ========== Education Item ========== */
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.education-item-institution {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+}
+
+.education-item-degree {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
+}
+
+.education-item-year {
+  font-family: var(--font-metadata);
+  font-size: 16px;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+/* ========== Tools Section (Right Side) ========== */
+
+.education-tools {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-tools-title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+/* ========== Tools Grid ========== */
+
+.education-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.education-tool-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: transparent;
+  border-radius: 10px;
+  transition: all var(--duration-normal) var(--ease-out);
+  cursor: pointer;
+}
+
+.education-tool-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.education-tool-item img,
+.education-tool-item svg {
+  width: 61px;
+  height: 61px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter var(--duration-normal) var(--ease-out);
+}
+
+.education-tool-item:hover img,
+.education-tool-item:hover svg {
+  filter: grayscale(0%);
+}
+
+/* ========== Responsive Styles ========== */
+
+@media (max-width: 1440px) {
+  .education-container {
+    max-width: calc(100% - 80px);
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .education-glass-container {
+    gap: 48px;
+    min-height: auto;
+  }
+
+  .education-tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .education {
+    padding: 100px 0;
+  }
+
+  .education-container {
+    max-width: calc(100% - 60px);
+    padding: 0 30px;
+  }
+
+  .education-title {
+    font-size: 42px;
+    letter-spacing: 0.84px;
+    margin-bottom: 48px;
+  }
+
+  .education-glass-container {
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .education-section-title,
+  .education-tools-title {
+    font-size: 20px;
+  }
+
+  .education-item-institution {
+    font-size: 16px;
+  }
+
+  .education-item-degree,
+  .education-item-year {
+    font-size: 14px;
+  }
+
+  .education-tool-item img,
+  .education-tool-item svg {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 80px 0;
+  }
+
+  .education-container {
+    max-width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+
+  .education-title {
+    font-size: 36px;
+    letter-spacing: 0.72px;
+    margin-bottom: 40px;
+  }
+
+  .education-glass-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 32px;
+    border-radius: 16px;
+  }
+
+  .education-section {
+    gap: 24px;
+  }
+
+  .education-section-title,
+  .education-tools-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .education-tools-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .education-tool-item img,
+  .education-tool-item svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education {
+    padding: 60px 0;
+  }
+
+  .education-container {
+    max-width: calc(100% - 32px);
+    padding: 0 16px;
+  }
+
+  .education-title {
+    font-size: 32px;
+    letter-spacing: 0.64px;
+    margin-bottom: 32px;
+  }
+
+  .education-glass-container {
+    padding: 24px;
+    gap: 32px;
+  }
+
+  .education-section {
+    gap: 20px;
+  }
+
+  .education-section-title,
+  .education-tools-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .education-item-institution {
+    font-size: 15px;
+  }
+
+  .education-item-degree,
+  .education-item-year {
+    font-size: 13px;
+  }
+
+  .education-tools-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .education-tool-item {
+    padding: 8px;
+  }
+
+  .education-tool-item img,
+  .education-tool-item svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ========== Animation ========== */
+
+@keyframes education-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.education-title {
+  animation: education-fade-in 0.6s var(--ease-out) 0.1s both;
+}
+
+.education-glass-container {
+  animation: education-fade-in 0.6s var(--ease-out) 0.2s both;
+}
+
+.education-tool-item {
+  animation: education-fade-in 0.4s var(--ease-out) both;
+}
+
+.education-tool-item:nth-child(1) { animation-delay: 0.3s; }
+.education-tool-item:nth-child(2) { animation-delay: 0.35s; }
+.education-tool-item:nth-child(3) { animation-delay: 0.4s; }
+.education-tool-item:nth-child(4) { animation-delay: 0.45s; }
+.education-tool-item:nth-child(5) { animation-delay: 0.5s; }
+.education-tool-item:nth-child(6) { animation-delay: 0.55s; }
+.education-tool-item:nth-child(7) { animation-delay: 0.6s; }
+.education-tool-item:nth-child(8) { animation-delay: 0.65s; }
+
+/* ========== Accessibility ========== */
+
+.education-tool-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .education-title,
+  .education-glass-container,
+  .education-tool-item {
+    animation: none;
+  }
+
+  .education-tool-item:hover {
+    transform: none;
+  }
+}
+
+/* ========== Print Styles ========== */
+
+@media print {
+  .education {
+    padding: 40px 0;
+  }
+
+  .education-glass-container {
+    background: #D9D9D9;
+    box-shadow: none;
+    padding: 40px;
+    page-break-inside: avoid;
+  }
+
+  .education-tool-item img,
+  .education-tool-item svg {
+    filter: grayscale(0%);
+  }
 }
