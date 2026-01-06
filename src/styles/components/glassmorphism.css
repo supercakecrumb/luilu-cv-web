@@ -1,0 +1,262 @@
+/* Glassmorphism Effect Component */
+
+/* ========== Base Glass Effect ========== */
+
+.glass {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(var(--glass-blur))) {
+  .glass {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* ========== Glass Variants ========== */
+
+/* Light Glass */
+.glass-light {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+}
+
+@supports not (backdrop-filter: blur(var(--glass-blur))) {
+  .glass-light {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Dark Glass */
+.glass-dark {
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-xl);
+  color: var(--color-text-primary);
+}
+
+@supports not (backdrop-filter: blur(var(--glass-blur))) {
+  .glass-dark {
+    background: rgba(153, 111, 113, 0.2);
+  }
+}
+
+/* Primary Glass (with brand color tint) */
+.glass-primary {
+  background: rgba(153, 111, 113, 0.15);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(153, 111, 113, 0.3);
+  border-radius: var(--radius-xl);
+}
+
+@supports not (backdrop-filter: blur(var(--glass-blur))) {
+  .glass-primary {
+    background: rgba(153, 111, 113, 0.25);
+  }
+}
+
+/* ========== Glass Intensity Variants ========== */
+
+/* Subtle blur */
+.glass-subtle {
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+}
+
+/* Strong blur */
+.glass-strong {
+  backdrop-filter: blur(var(--blur-2xl));
+  -webkit-backdrop-filter: blur(var(--blur-2xl));
+}
+
+/* ========== Glass Border Radius Variants ========== */
+
+.glass-rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+.glass-rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.glass-rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.glass-rounded-xl {
+  border-radius: var(--radius-xl);
+}
+
+.glass-rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+
+.glass-rounded-full {
+  border-radius: var(--radius-full);
+}
+
+/* ========== Glass with Shadow ========== */
+
+.glass-shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.glass-shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.glass-shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.glass-shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+/* ========== Frosted Glass Effect ========== */
+
+.glass-frosted {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(var(--blur-xl)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--blur-xl)) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+@supports not (backdrop-filter: blur(var(--blur-xl))) {
+  .glass-frosted {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+/* ========== Glass Card ========== */
+
+.glass-card {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+@supports not (backdrop-filter: blur(var(--glass-blur))) {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* ========== Glass Overlay ========== */
+
+.glass-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(var(--blur-sm));
+  -webkit-backdrop-filter: blur(var(--blur-sm));
+  z-index: var(--z-index-modal-backdrop);
+}
+
+@supports not (backdrop-filter: blur(var(--blur-sm))) {
+  .glass-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ========== Glass Navigation ========== */
+
+.glass-nav {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+}
+
+@supports not (backdrop-filter: blur(var(--glass-blur))) {
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* ========== Responsive Glass Effects ========== */
+
+@media (max-width: 768px) {
+  .glass-card {
+    padding: var(--space-lg);
+  }
+  
+  /* Reduce blur on mobile for better performance */
+  .glass,
+  .glass-light,
+  .glass-dark,
+  .glass-primary,
+  .glass-frosted,
+  .glass-card,
+  .glass-nav {
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+  }
+}
+
+/* ========== Animation for Glass Elements ========== */
+
+@keyframes glass-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.glass-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: glass-shimmer 2s infinite;
+}
+
+/* ========== Glass Accessibility ========== */
+
+/* Ensure glass elements maintain sufficient contrast */
+.glass[role="button"]:focus-visible,
+.glass-card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Reduce transparency in high contrast mode */
+@media (prefers-contrast: high) {
+  .glass,
+  .glass-light,
+  .glass-dark,
+  .glass-primary,
+  .glass-card {
+    background: var(--color-white);
+    border: 2px solid var(--color-black);
+  }
+}

@@ -1,0 +1,124 @@
+/* Main CSS Entry Point */
+
+/* ========== Base Styles ========== */
+/* Reset and normalize browser defaults */
+@import './base/reset.css';
+
+/* CSS Custom Properties / Design Tokens */
+@import './base/variables.css';
+
+/* Typography system and font loading */
+@import './base/typography.css';
+
+/* ========== Layout Utilities ========== */
+/* Container and spacing utilities */
+@import './layout/container.css';
+
+/* Grid and flexbox utilities */
+@import './layout/grid.css';
+
+/* ========== Component Styles ========== */
+/* Button component */
+@import './components/button.css';
+
+/* Badge component */
+@import './components/badge.css';
+
+/* Card component */
+@import './components/card.css';
+
+/* Glassmorphism effects */
+@import './components/glassmorphism.css';
+
+/* Navigation component */
+@import './components/navigation.css';
+
+/* ========== Section Styles ========== */
+/* Header section */
+@import './sections/header.css';
+
+/* Hero section */
+@import './sections/hero.css';
+
+/* About section */
+@import './sections/about.css';
+
+/* Works section */
+@import './sections/works.css';
+
+/* Experience section */
+@import './sections/experience.css';
+
+/* Education section */
+@import './sections/education.css';
+
+/* Contacts section */
+@import './sections/contacts.css';
+
+/* Footer section */
+@import './sections/footer.css';
+
+/* ========== Global Styles ========== */
+
+body {
+  background-color: var(--color-bg-primary);
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing */
+section {
+  position: relative;
+}
+
+/* Utility classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Loading state */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--duration-normal) var(--ease-out) forwards;
+}
+
+/* Print styles */
+@media print {
+  .navigation,
+  .footer {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+}

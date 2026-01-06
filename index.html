@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website for graphic and UX designer Luiza - showcasing design projects, work experience, and creative expertise">
+  <meta name="keywords" content="graphic design, UX design, portfolio, designer, Luiza">
+  <meta name="author" content="Luiza">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luiza-portfolio.com/">
+  <meta property="og:title" content="Луиза - Graphic & UX Designer Portfolio">
+  <meta property="og:description" content="Portfolio website showcasing design projects and creative work">
+  <meta property="og:image" content="/images/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://luiza-portfolio.com/">
+  <meta property="twitter:title" content="Луиза - Graphic & UX Designer Portfolio">
+  <meta property="twitter:description" content="Portfolio website showcasing design projects and creative work">
+  <meta property="twitter:image" content="/images/twitter-image.jpg">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Font preloads - will be added when fonts are available -->
+  <!-- <link rel="preload" href="/fonts/Vetrino-Regular.woff2" as="font" type="font/woff2" crossorigin> -->
+  <!-- <link rel="preload" href="/fonts/SFProText-Regular.woff2" as="font" type="font/woff2" crossorigin> -->
+  <!-- <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin> -->
+  
+  <title>Луиза - Graphic & UX Designer Portfolio</title>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="navigation" role="navigation" aria-label="Main navigation">
+        <div class="navigation__logo">
+          <a href="#hero" aria-label="Home">
+            <span class="logo-text">Луиза</span>
+          </a>
+        </div>
+        
+        <ul class="navigation__menu" role="menubar">
+          <li role="none">
+            <a href="#about" class="navigation__link" role="menuitem">Обо мне</a>
+          </li>
+          <li role="none">
+            <a href="#works" class="navigation__link" role="menuitem">Работы</a>
+          </li>
+          <li role="none">
+            <a href="#experience" class="navigation__link" role="menuitem">Опыт</a>
+          </li>
+          <li role="none">
+            <a href="#education" class="navigation__link" role="menuitem">Образование</a>
+          </li>
+          <li role="none">
+            <a href="#contacts" class="navigation__link" role="menuitem">Контакты</a>
+          </li>
+        </ul>
+        
+        <div class="navigation__cta">
+          <a href="#contacts" class="btn btn--primary">Связаться</a>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <button class="navigation__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="navigation__toggle-icon"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero / Cover Section -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1 class="hero__title">
+              <span class="hero__greeting">Привет! Я Луиза</span>
+              <span class="hero__role">Графический и UX дизайнер</span>
+            </h1>
+            <p class="hero__description">
+              Создаю визуальные решения, которые помогают бизнесу выделяться и достигать целей. 
+              Работаю с брендингом, веб-дизайном и пользовательским опытом.
+            </p>
+            <div class="hero__actions">
+              <a href="#works" class="btn btn--primary btn--large">Смотреть работы</a>
+              <a href="#contacts" class="btn btn--secondary btn--large">Обсудить проект</a>
+            </div>
+          </div>
+          <div class="hero__image">
+            <!-- Profile image will be added later -->
+            <div class="hero__image-placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-title" class="section-title">Обо мне</h2>
+          <p class="section-subtitle">Немного о моем пути в дизайне</p>
+        </div>
+        
+        <div class="about__content">
+          <div class="about__story">
+            <p class="about__text">
+              Я увлечена созданием визуальных историй, которые не только красивы, 
+              но и функциональны. С опытом работы в графическом и UX дизайне, 
+              я помогаю брендам находить свой уникальный голос.
+            </p>
+            <p class="about__text">
+              Моя работа сочетает креативность с аналитическим подходом, 
+              чтобы создавать дизайн, который решает реальные задачи бизнеса 
+              и делает пользовательский опыт незабываемым.
+            </p>
+          </div>
+          
+          <div class="about__stats">
+            <div class="stat-card">
+              <div class="stat-card__value">5+</div>
+              <div class="stat-card__label">Лет опыта</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__value">50+</div>
+              <div class="stat-card__label">Проектов</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__value">30+</div>
+              <div class="stat-card__label">Довольных клиентов</div>
+            </div>
+          </div>
+          
+          <div class="about__skills">
+            <h3 class="about__skills-title">Ключевые навыки</h3>
+            <div class="skills-grid">
+              <span class="skill-badge">UI/UX Design</span>
+              <span class="skill-badge">Branding</span>
+              <span class="skill-badge">Web Design</span>
+              <span class="skill-badge">Mobile Design</span>
+              <span class="skill-badge">Prototyping</span>
+              <span class="skill-badge">Design Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Works Section -->
+    <section id="works" class="works" aria-labelledby="works-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="works-title" class="section-title">Мои работы</h2>
+          <p class="section-subtitle">Избранные проекты из моего портфолио</p>
+        </div>
+        
+        <div class="works__filter">
+          <button class="filter-btn filter-btn--active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="branding">Брендинг</button>
+          <button class="filter-btn" data-filter="web">Веб-дизайн</button>
+          <button class="filter-btn" data-filter="mobile">Мобильные приложения</button>
+          <button class="filter-btn" data-filter="ux">UX/UI</button>
+        </div>
+        
+        <div class="works__grid">
+          <!-- Project Card 1 -->
+          <article class="work-card" data-category="branding">
+            <div class="work-card__image">
+              <!-- Project image will be added later -->
+              <div class="work-card__image-placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="work-card__content">
+              <h3 class="work-card__title">Название проекта 1</h3>
+              <p class="work-card__description">
+                Краткое описание проекта и решаемых задач
+              </p>
+              <div class="work-card__tags">
+                <span class="tag">Брендинг</span>
+                <span class="tag">Айдентика</span>
+              </div>
+              <a href="#" class="work-card__link">Подробнее →</a>
+            </div>
+          </article>
+          
+          <!-- Project Card 2 -->
+          <article class="work-card" data-category="web">
+            <div class="work-card__image">
+              <div class="work-card__image-placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="work-card__content">
+              <h3 class="work-card__title">Название проекта 2</h3>
+              <p class="work-card__description">
+                Краткое описание проекта и решаемых задач
+              </p>
+              <div class="work-card__tags">
+                <span class="tag">Веб-дизайн</span>
+                <span class="tag">UI/UX</span>
+              </div>
+              <a href="#" class="work-card__link">Подробнее →</a>
+            </div>
+          </article>
+          
+          <!-- Project Card 3 -->
+          <article class="work-card" data-category="mobile">
+            <div class="work-card__image">
+              <div class="work-card__image-placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="work-card__content">
+              <h3 class="work-card__title">Название проекта 3</h3>
+              <p class="work-card__description">
+                Краткое описание проекта и решаемых задач
+              </p>
+              <div class="work-card__tags">
+                <span class="tag">Мобильное приложение</span>
+                <span class="tag">UX</span>
+              </div>
+              <a href="#" class="work-card__link">Подробнее →</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="works__cta">
+          <a href="#contacts" class="btn btn--secondary">Обсудить ваш проект</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="experience-title" class="section-title">Опыт работы</h2>
+          <p class="section-subtitle">Моя профессиональная история</p>
+        </div>
+        
+        <div class="experience__timeline">
+          <!-- Experience Item 1 -->
+          <article class="experience-card">
+            <div class="experience-card__period">
+              <time datetime="2021">2021</time> - <time datetime="2024">Настоящее время</time>
+            </div>
+            <div class="experience-card__content">
+              <h3 class="experience-card__title">Senior UX/UI Designer</h3>
+              <p class="experience-card__company">Название компании</p>
+              <p class="experience-card__description">
+                Разработка пользовательских интерфейсов для веб и мобильных приложений. 
+                Создание дизайн-систем и руководств по стилю. Проведение UX-исследований.
+              </p>
+              <div class="experience-card__skills">
+                <span class="skill-badge skill-badge--small">Figma</span>
+                <span class="skill-badge skill-badge--small">Design Systems</span>
+                <span class="skill-badge skill-badge--small">User Research</span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Experience Item 2 -->
+          <article class="experience-card">
+            <div class="experience-card__period">
+              <time datetime="2019">2019</time> - <time datetime="2021">2021</time>
+            </div>
+            <div class="experience-card__content">
+              <h3 class="experience-card__title">Graphic Designer</h3>
+              <p class="experience-card__company">Название компании</p>
+              <p class="experience-card__description">
+                Создание визуальных концепций для брендов. Разработка логотипов, 
+                фирменного стиля и маркетинговых материалов.
+              </p>
+              <div class="experience-card__skills">
+                <span class="skill-badge skill-badge--small">Illustrator</span>
+                <span class="skill-badge skill-badge--small">Photoshop</span>
+                <span class="skill-badge skill-badge--small">Branding</span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Experience Item 3 -->
+          <article class="experience-card">
+            <div class="experience-card__period">
+              <time datetime="2017">2017</time> - <time datetime="2019">2019</time>
+            </div>
+            <div class="experience-card__content">
+              <h3 class="experience-card__title">Junior Designer</h3>
+              <p class="experience-card__company">Название компании</p>
+              <p class="experience-card__description">
+                Помощь в создании дизайн-проектов. Работа над веб-дизайном 
+                и печатными материалами.
+              </p>
+              <div class="experience-card__skills">
+                <span class="skill-badge skill-badge--small">Adobe CC</span>
+                <span class="skill-badge skill-badge--small">Web Design</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Tools Section -->
+    <section id="education" class="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="education-title" class="section-title">Образование и инструменты</h2>
+          <p class="section-subtitle">Моя академическая база и рабочий арсенал</p>
+        </div>
+        
+        <div class="education__content">
+          <!-- Education Subsection -->
+          <div class="education__section">
+            <h3 class="education__section-title">Образование</h3>
+            
+            <article class="education-card">
+              <div class="education-card__icon" aria-hidden="true">🎓</div>
+              <div class="education-card__content">
+                <h4 class="education-card__degree">Магистр дизайна</h4>
+                <p class="education-card__institution">Название университета</p>
+                <p class="education-card__period">
+                  <time datetime="2015">2015</time> - <time datetime="2017">2017</time>
+                </p>
+              </div>
+            </article>
+            
+            <article class="education-card">
+              <div class="education-card__icon" aria-hidden="true">🎓</div>
+              <div class="education-card__content">
+                <h4 class="education-card__degree">Бакалавр графического дизайна</h4>
+                <p class="education-card__institution">Название университета</p>
+                <p class="education-card__period">
+                  <time datetime="2011">2011</time> - <time datetime="2015">2015</time>
+                </p>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Tools Subsection -->
+          <div class="education__section">
+            <h3 class="education__section-title">Инструменты и технологии</h3>
+            
+            <div class="tools-grid">
+              <div class="tool-card">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <!-- Tool icon will be added later -->
+                </div>
+                <h4 class="tool-card__name">Figma</h4>
+                <p class="tool-card__level">Expert</p>
+              </div>
+              
+              <div class="tool-card">
+                <div class="tool-card__icon" aria-hidden="true"></div>
+                <h4 class="tool-card__name">Adobe Illustrator</h4>
+                <p class="tool-card__level">Expert</p>
+              </div>
+              
+              <div class="tool-card">
+                <div class="tool-card__icon" aria-hidden="true"></div>
+                <h4 class="tool-card__name">Adobe Photoshop</h4>
+                <p class="tool-card__level">Advanced</p>
+              </div>
+              
+              <div class="tool-card">
+                <div class="tool-card__icon" aria-hidden="true"></div>
+                <h4 class="tool-card__name">Sketch</h4>
+                <p class="tool-card__level">Advanced</p>
+              </div>
+              
+              <div class="tool-card">
+                <div class="tool-card__icon" aria-hidden="true"></div>
+                <h4 class="tool-card__name">Adobe XD</h4>
+                <p class="tool-card__level">Intermediate</p>
+              </div>
+              
+              <div class="tool-card">
+                <div class="tool-card__icon" aria-hidden="true"></div>
+                <h4 class="tool-card__name">Framer</h4>
+                <p class="tool-card__level">Intermediate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="contacts-title" class="section-title">Свяжитесь со мной</h2>
+          <p class="section-subtitle">Давайте обсудим ваш проект</p>
+        </div>
+        
+        <div class="contacts__content">
+          <div class="contacts__info">
+            <p class="contacts__text">
+              Открыта для новых проектов и интересных предложений. 
+              Буду рада обсудить, как могу помочь вашему бизнесу.
+            </p>
+            
+            <div class="contact-methods">
+              <a href="mailto:hello@luiza.design" class="contact-method">
+                <span class="contact-method__icon" aria-hidden="true">✉️</span>
+                <span class="contact-method__label">Email</span>
+                <span class="contact-method__value">hello@luiza.design</span>
+              </a>
+              
+              <a href="tel:+79001234567" class="contact-method">
+                <span class="contact-method__icon" aria-hidden="true">📱</span>
+                <span class="contact-method__label">Телефон</span>
+                <span class="contact-method__value">+7 900 123-45-67</span>
+              </a>
+              
+              <div class="contact-method">
+                <span class="contact-method__icon" aria-hidden="true">📍</span>
+                <span class="contact-method__label">Локация</span>
+                <span class="contact-method__value">Москва, Россия</span>
+              </div>
+            </div>
+            
+            <div class="social-links">
+              <h3 class="social-links__title">Социальные сети</h3>
+              <div class="social-links__list">
+                <a href="#" class="social-link" aria-label="Telegram">
+                  <span class="social-link__icon">TG</span>
+                </a>
+                <a href="#" class="social-link" aria-label="Behance">
+                  <span class="social-link__icon">BE</span>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <span class="social-link__icon">IN</span>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <span class="social-link__icon">IG</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contacts__form">
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="name" class="form-label">Ваше имя</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="form-input" 
+                  required
+                  placeholder="Иван Иванов"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  required
+                  placeholder="ivan@example.com"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="subject" class="form-label">Тема</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  class="form-input" 
+                  placeholder="Вопрос о сотрудничестве"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Сообщение</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-textarea" 
+                  rows="5" 
+                  required
+                  placeholder="Расскажите о вашем проекте..."
+                ></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn--primary btn--large">
+                Отправить сообщение
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <p class="footer__logo">Луиза</p>
+          <p class="footer__tagline">Graphic & UX Designer</p>
+        </div>
+        
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-section">
+            <h3 class="footer__nav-title">Навигация</h3>
+            <ul class="footer__nav-list">
+              <li><a href="#about" class="footer__link">Обо мне</a></li>
+              <li><a href="#works" class="footer__link">Работы</a></li>
+              <li><a href="#experience" class="footer__link">Опыт</a></li>
+              <li><a href="#education" class="footer__link">Образование</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer__nav-section">
+            <h3 class="footer__nav-title">Контакты</h3>
+            <ul class="footer__nav-list">
+              <li><a href="mailto:hello@luiza.design" class="footer__link">Email</a></li>
+              <li><a href="tel:+79001234567" class="footer__link">Телефон</a></li>
+              <li><a href="#" class="footer__link">Telegram</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer__nav-section">
+            <h3 class="footer__nav-title">Социальные сети</h3>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__link">Behance</a></li>
+              <li><a href="#" class="footer__link">LinkedIn</a></li>
+              <li><a href="#" class="footer__link">Instagram</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © <time datetime="2024">2024</time> Луиза. Все права защищены.
+        </p>
+        <div class="footer__legal">
+          <a href="#" class="footer__link footer__link--small">Политика конфиденциальности</a>
+          <a href="#" class="footer__link footer__link--small">Условия использования</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
