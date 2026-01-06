@@ -1,0 +1,406 @@
+/**
+ * Animation Styles
+ * CSS classes for scroll animations, transitions, and interactive effects
+ */
+
+/* ===========================
+   FADE-IN ANIMATIONS
+   =========================== */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   STAGGER ANIMATIONS
+   =========================== */
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.stagger-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   HEADER ANIMATIONS
+   =========================== */
+
+.header {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* ===========================
+   NAVIGATION ANIMATIONS
+   =========================== */
+
+.navigation__link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navigation__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.navigation__link:hover::after,
+.navigation__link.active::after {
+  width: 100%;
+}
+
+.navigation__link.active {
+  color: var(--color-primary, #007bff);
+  font-weight: 600;
+}
+
+/* Mobile Menu Animation */
+@media (max-width: 767px) {
+  .navigation__menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  .navigation__menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Menu Toggle Animation */
+.navigation__toggle {
+  transition: transform 0.3s ease;
+}
+
+.navigation__toggle.active {
+  transform: rotate(90deg);
+}
+
+.navigation__toggle-icon {
+  transition: background-color 0.3s ease;
+}
+
+/* ===========================
+   BUTTON ANIMATIONS
+   =========================== */
+
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   CARD ANIMATIONS
+   =========================== */
+
+.work-card,
+.experience-card,
+.education-card,
+.tool-card,
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.work-card:hover,
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.work-card__image {
+  overflow: hidden;
+}
+
+.work-card__image img,
+.work-card__image-placeholder {
+  transition: transform 0.3s ease;
+}
+
+.work-card:hover .work-card__image img,
+.work-card:hover .work-card__image-placeholder {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   FILTER BUTTON ANIMATIONS
+   =========================== */
+
+.filter-btn {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.filter-btn--active {
+  background-color: var(--color-primary, #007bff);
+  color: white;
+}
+
+/* ===========================
+   IMAGE LAZY LOADING
+   =========================== */
+
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-image.loading {
+  opacity: 0.5;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+.lazy-image.error {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ===========================
+   FORM ANIMATIONS
+   =========================== */
+
+.form-input,
+.form-textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary, #007bff);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: #dc3545;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* ===========================
+   LINK ANIMATIONS
+   =========================== */
+
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.contact-method {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-method:hover {
+  transform: translateX(8px);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.social-link {
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+  background-color: var(--color-primary, #007bff);
+  color: white;
+}
+
+/* ===========================
+   SKILL BADGE ANIMATIONS
+   =========================== */
+
+.skill-badge {
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   PARALLAX EFFECTS
+   =========================== */
+
+.parallax-element {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+/* ===========================
+   SCROLL PROGRESS
+   =========================== */
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===========================
+   UTILITY ANIMATION CLASSES
+   =========================== */
+
+.animate-slide-left {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideInFromRight 0.6s ease-out;
+}
+
+.animate-slide-bottom {
+  animation: slideInFromBottom 0.6s ease-out;
+}
+
+.animate-fade {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ===========================
+   REDUCED MOTION
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in,
+  .stagger-item {
+    opacity: 1;
+    transform: none;
+  }
+
+  .parallax-element {
+    transform: none !important;
+  }
+}
+
+/* ===========================
+   PERFORMANCE OPTIMIZATIONS
+   =========================== */
+
+.fade-in,
+.stagger-item,
+.work-card,
+.parallax-element {
+  will-change: transform, opacity;
+}
+
+/* Remove will-change after animation completes */
+.fade-in.visible,
+.stagger-item.visible {
+  will-change: auto;
+}

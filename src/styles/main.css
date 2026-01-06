@@ -33,6 +33,9 @@
 /* Navigation component */
 @import './components/navigation.css';
 
+/* Animation effects */
+@import './components/animations.css';
+
 /* ========== Section Styles ========== */
 /* Header section */
 @import './sections/header.css';
@@ -58,11 +61,38 @@
 /* Footer section */
 @import './sections/footer.css';
 
+/* New design-specific styles */
+@import './sections/new-styles.css';
+
 /* ========== Global Styles ========== */
 
 body {
   background-color: var(--color-bg-primary);
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Background decoration */
+.background-decoration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-shape {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  transform: scaleY(-1) rotate(180deg);
 }
 
 /* Smooth scrolling for anchor links */

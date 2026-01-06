@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 1495 4563" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-40" y="-40" width="1575" height="4643"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20px);clip-path:url(#bgblur_0_141_21_clip_path);height:100%;width:100%"></div></foreignObject><path id="Rectangle 22" data-figma-bg-blur-radius="40" d="M0 86.9999C0 38.9512 38.9512 0 87 0H1408C1456.05 0 1495 38.9512 1495 87V4476C1495 4524.05 1456.05 4563 1408 4563H87C38.9512 4563 0 4524.05 0 4476V86.9999Z" fill="url(#paint0_linear_141_21)" fill-opacity="0.2"/>
+<defs>
+<clipPath id="bgblur_0_141_21_clip_path" transform="translate(40 40)"><path d="M0 86.9999C0 38.9512 38.9512 0 87 0H1408C1456.05 0 1495 38.9512 1495 87V4476C1495 4524.05 1456.05 4563 1408 4563H87C38.9512 4563 0 4524.05 0 4476V86.9999Z"/>
+</clipPath><linearGradient id="paint0_linear_141_21" x1="747.5" y1="4563" x2="411.872" y2="666.491" gradientUnits="userSpaceOnUse">
+<stop offset="0.840391" stop-color="#D8D8DA"/>
+<stop offset="1" stop-color="#FF5680"/>
+</linearGradient>
+</defs>
+</svg>
