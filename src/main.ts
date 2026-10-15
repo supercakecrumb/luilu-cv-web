@@ -35,8 +35,6 @@ class App {
   private navigation: Navigation | null = null;
   private scrollAnimations: ScrollAnimations | null = null;
   private imageLazyLoader: ImageLazyLoader | null = null;
-  private languageSwitcher: LanguageSwitcher | null = null;
-  private translationUpdater: TranslationUpdater | null = null;
 
   constructor() {
     console.log('🎨 Luiza Portfolio - Initializing...');
@@ -110,10 +108,10 @@ class App {
   private initializeI18n(): void {
     try {
       // Initialize translation updater (handles automatic content updates)
-      this.translationUpdater = new TranslationUpdater();
+      new TranslationUpdater();
       
       // Initialize language switcher (handles button interaction)
-      this.languageSwitcher = new LanguageSwitcher();
+      new LanguageSwitcher();
       
       console.log('✓ i18n system initialized');
     } catch (error) {
@@ -245,10 +243,6 @@ class App {
     if (this.imageLazyLoader) {
       this.imageLazyLoader.destroy();
     }
-
-    // Clean up i18n (note: these don't have destroy methods but we null them)
-    this.languageSwitcher = null;
-    this.translationUpdater = null;
 
     // Destroy all components
     this.components.forEach((component, name) => {
